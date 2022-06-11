@@ -5,8 +5,9 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
-// HTTP Logger
+app.use(express.static(path.join(__dirname, 'public')));
 
+// HTTP Logger
 app.use(morgan('combined'));
 
 // Template engine
